@@ -4,12 +4,12 @@ const Schema = mongoose.Schema
 const Accomodation = new Schema ({
     name: String,
     location: String,
+    url: String,
     image: String,
     breakfast: Boolean,
     pets: Boolean,
     user_review: [{
         ref: "Review",
-        // type: mongoose.Schema.Types.ObjectId
         type: Schema.Types.ObjectId
     }],
     guest: [{

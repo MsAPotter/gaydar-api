@@ -6,16 +6,17 @@ const Reviews = new Schema ({
         ref: "Accomodation",
         type: Schema.Types.ObjectId
     }],
-    accomodation_location: [{
-        ref: "Accomodation",
-        type: Schema.Types.ObjectId
-    }],
+    // accomodation_location: [{
+    //     ref: "Accomodation",
+    //     type: Schema.Types.ObjectId
+    // }],
     review: String,
     user_name: [{
         ref: "User",
         type: Schema.Types.ObjectId
     }],
-    date: Date,
+    // date: Date,
+    date: String,
     rating: Number,
     nights_stayed: Number 
 })

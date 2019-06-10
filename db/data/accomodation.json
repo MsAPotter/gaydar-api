@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Alexander's Guesthouse",
+        "location": "Key West, FL",
+        "url": "http://www.alexanderskeywest.com/",
+        "image": "http://www.alexanderskeywest.com/users/435766/photos/src/435766_2685847.jpg",
+        "breakfast": true,
+        "pets": false,
+        "user_review": [],
+        "guest": []
+    }
+]
