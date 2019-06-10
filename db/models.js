@@ -1,4 +1,4 @@
-const mongoose = require('../connection')
+const mongoose = require('./connection')
 const Schema = mongoose.Schema
 
 const Accomodation = new Schema ({
@@ -55,7 +55,7 @@ const AccomodationModel = mongoose.model('Accomodation', Accomodation);
 const ReviewModel = mongoose.model('Reviews', Reviews);
 const UserModel = mongoose.model('User', User);
 
-modeuls.exports = { Accomodation: AccomodationModel, Review = ReviewModel, User = UserModel };
+module.exports = { Accomodation: AccomodationModel, Reviews: ReviewModel, User: UserModel };
 
 
 
