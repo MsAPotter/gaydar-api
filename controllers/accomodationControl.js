@@ -1,26 +1,32 @@
-const { Accomodation, Reviews, User} = require ('../db/models');
+const { Accomodation, Reviews, User} = require('../db/models');
 
 module.exports = {
     index: (req, res) => {
-        Accomodation.find({}).then(accomodations => {
+        Accomodation.find({})
+        .then((accomodations) => {
             res.json(accomodations)
           })
     },
     findById: (req, res) => {
-        Accomodation.findOne({_id: req.params.accomodationId}).then((accomodation) => 
-        { res.json(accomodation); })
+        Accomodation.findOne({_id: req.params.accomodationId})
+        .then((accomodation) => { 
+            res.json(accomodation) 
+        })
     },
     create: (req, res) => {
-        Accomodation.create({}).then((created) => {
+        Accomodation.create(req.body)
+        .then((created) => {
             res.json(created)
         })
     },
     update: (req, res) => {
-        Accomodation.findOne({_id: req.params.accomodationId}).then((accomodation) => 
+        Accomodation.findOne({_id: req.params.accomodationId})
+        .then((accomodation) => 
         { res.json(accomodation); })
     },
     delete: (req, res) => {
-        Accomodation.findOne({_id: req.params.accomodationId}).then((accomodation) => 
-        { Accomodation.deleteOne ({_id: req.params.accomodationId})})
+        Accomodation.findOne({_id: req.params.accomodationId})
+        .then((accomodation) => 
+        { Accomodation.deleteOne ({_id: req.params.accomodationId}) })
     }
 }

@@ -1,4 +1,4 @@
-const { Reviews, Accomodation, User} = require ('../db/models');
+const { Reviews, Accomodation, User} = require('../db/models');
 
 module.exports = {
     index: (req, res) => {

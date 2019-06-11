@@ -17,8 +17,23 @@ Accomodation.find({}).deleteMany({}).then(() => {
         console.log('deleted all reviews')
 
             Accomodation.create(accomodationData)
-            .then((data) => {
-                console.log(data);
+            .then((lodging) => {
+                // console.log(lodging);
+
+                Reviews.create(reviewData)
+                .then((review) => {
+                    // console.log(review)
+                    // console.log(lodging[0].user_review)
+
+                    lodging[0].user_review.push(review[0]._id)
+                    lodging[0].save()
+                    console.log(lodging)
+
+                    User.create(userData)
+                    .then((user) => {
+                        // console.log(user)
+                    })
+                })
               })
             .catch(error => console.log('Uh oh!', error))
 

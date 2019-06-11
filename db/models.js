@@ -9,29 +9,19 @@ const Accomodation = new Schema ({
     breakfast: Boolean,
     pets: Boolean,
     user_review: [{
-        ref: "Review",
-        type: Schema.Types.ObjectId
-    }],
-    guest: [{
-        ref: "User",
+        ref: "Reviews",
         type: Schema.Types.ObjectId
     }]
 });
 
 const Reviews = new Schema ({
-    accomodation_name: [{
-        ref: "Accomodation",
-        type: Schema.Types.ObjectId
-    }],
+    accomodation_name: String,
     // accomodation_location: [{
     //     ref: "Accomodation",
     //     type: Schema.Types.ObjectId
     // }],
     review: String,
-    user_name: [{
-        ref: "User",
-        type: Schema.Types.ObjectId
-    }],
+    user_name: String,
     // date: Date,
     date: String,
     rating: Number,
@@ -41,14 +31,8 @@ const Reviews = new Schema ({
 const User = new Schema ({
     name: String,
     // image: String,
-    user_review: [{
-        ref: "Review",
-        type: Schema.Types.ObjectId
-    }],
-    accomodation_visited: [{
-        ref: "Accomodation",
-        type: Schema.Types.ObjectId
-    }]
+    user_review: String,
+    accomodation_visited: String
 });
 
 const AccomodationModel = mongoose.model('Accomodation', Accomodation);
