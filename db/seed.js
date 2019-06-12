@@ -28,10 +28,11 @@ Accomodation.find({}).deleteMany({}).then(() => {
                     lodging[0].user_review.push(review[0]._id)
                     lodging[0].save()
                     console.log(lodging)
+                    console.log(review)
 
                     User.create(userData)
                     .then((user) => {
-                        // console.log(user)
+                        console.log(user)
                     })
                 })
               })

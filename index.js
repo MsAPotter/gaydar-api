@@ -6,11 +6,11 @@ const cors = require('cors');
 const accomodationRouter = require('./routes/accomodationRoute.js');
 const reviewsRouter = require('./routes/reviewRoute.js');
 
-
 app.use(cors());
 app.use(parser.urlencoded({extended: true}));
 app.use(parser.json()); 
 
+// MOUNT ROUTES
 // app.use = require('./routes/index')
 app.use('/api/accomodations/', accomodationRouter);
 app.use('/api/accomodations/:accomodationId/reviews/', reviewsRouter);

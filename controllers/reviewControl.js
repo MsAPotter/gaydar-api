@@ -16,7 +16,7 @@ module.exports = {
         })
     },
     update: (req, res) => {
-        Reviews.findOne({_id: req.params.reviewId}).then((review) => 
+        Reviews.updateOne({_id: req.params.reviewId}).then((review) => 
         { res.json(review); })
     },
     delete: (req, res) => {

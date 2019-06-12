@@ -20,13 +20,15 @@ module.exports = {
         })
     },
     update: (req, res) => {
-        Accomodation.findOne({_id: req.params.accomodationId})
-        .then((accomodation) => 
-        { res.json(accomodation); })
+        Accomodation.updateOne({ _id: req.params.accomodationId}, req.body)
+        .then((accomodation) => { 
+            res.json(accomodation) 
+        })
     },
     delete: (req, res) => {
-        Accomodation.findOne({_id: req.params.accomodationId})
-        .then((accomodation) => 
-        { Accomodation.deleteOne ({_id: req.params.accomodationId}) })
+        Accomodation.findOneAndDelete({_id: req.params.accomodationId})
+        .then((deleted) => { 
+            res.json(deleted)
+        })
     }
 }
