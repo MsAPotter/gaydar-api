@@ -11,6 +11,11 @@ Mongo, Mongoose, Express, Node.js, Body-Parser, Cors
 ## Approach
 The app is accomodation-centric. There are three models - Accomodation, Review, and User - with the Reviews model nested within the User model.
 
+## Issues
+
+The code to access all the reveiws for one particular accommodation listing is still incomplete. *See the Review controller for findReviewsForOneLodging
+
+
 ## How to fork a repository
 
 Find the link on GitHub
