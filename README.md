@@ -13,6 +13,10 @@ The app is accomodation-centric. There are three models - Accomodation, Review, 
 
 https://user-images.githubusercontent.com/47091947/59501549-c3406b80-8e69-11e9-890b-dab56a78f903.png
 
+## Route Planning
+
+See Route Planning xls for original route planning
+
 
 ## Issues
 
