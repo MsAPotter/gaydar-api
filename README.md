@@ -15,12 +15,12 @@ https://user-images.githubusercontent.com/47091947/59501549-c3406b80-8e69-11e9-8
 
 ## Route Planning
 
-See Route Planning xls for original route planning
+See Route Planning xlsx for original route planning
 
 
 ## Issues
 
-The code to access all the reveiws for one particular accommodation listing is still incomplete. *See the Review controller for findReviewsForOneLodging
+The code to access all the reveiws for one particular accommodation listing is still incomplete. *See the Review controller for findReviewsForOneLodging*
 
 
 ## How to fork a repository
