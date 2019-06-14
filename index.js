@@ -13,7 +13,7 @@ app.use(parser.json());
 // MOUNT ROUTES
 // app.use = require('./routes/index')
 app.use('/api/accomodations/', accomodationRouter);
-app.use('/api/accomodations/:accomodationId/reviews/', reviewsRouter);
+app.use('/api/reviews/', reviewsRouter);
 
 app.get('/', (req,res) => {
     res.redirect('/api/accomodations/');

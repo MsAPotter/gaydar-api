@@ -8,6 +8,8 @@ router.get('/', controller.index);
 // router.get('/api/accomodations/:accomodationId'
 router.get('/:accomodationId', controller.findById);
 
+router.get('/:accomodationId/reviews', controller.findById);
+
 // router.post('/api/accomodations/'
 router.post('/', controller.create);
 

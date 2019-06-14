@@ -3,14 +3,28 @@ const { Reviews, Accomodation, User} = require('../db/models');
 module.exports = {
     index: (req, res) => {
         Reviews.find({})
-        .then(reviews => {
-            res.json(reviews)
+        .then((allreviews) => {
+            res.json(allreviews)
           })
     },
     findById: (req, res) => {
         Reviews.findOne({_id: req.params.reviewId})
         .then((review) => { 
-            res.json(review)
+            res.json(review) 
+        })
+    },
+    findReviewsForOneLodging: (req, res) => {
+        Accomodation.findOne({_id: req.params.accomodationId})
+        .then(accomodation => {
+            console.log(accomodation)
+            Reviews.find({})
+                console.log(accomodation.name)
+                console.log(accomodation.location)
+                console.log(accomodation.review)
+            .then(review => {
+                res.json(review)
+                console.log(review)
+            })
         })
     },
     create: (req, res) => {
